@@ -340,7 +340,12 @@ table { border-collapse: collapse; }
   float: right; width: 96px; height: 118px; background: #dfe9d8;
   border: 1px solid #c3d3b9; color: #7a8a72; font-size: 11px;
   text-align: center; line-height: 116px; margin: 0 0 4px 8px; box-sizing: border-box;
+  object-fit: cover;
 }
+.home2 img.img-ph { line-height: normal; }
+img.bbs-cl-starpic, img.bbs-fh-logo, img.bbs-fh-navfirst, img.bbs-cl-logo, img.bbs-cb-logo, img.bbs-cb-banner, .bbs-intro-img img { display: block; }
+.bbs-cb-banner img { width: 100%; max-width: 480px; height: 64px; object-fit: cover; }
+.bbs-cl-submit { display: inline-block; background: #3F8805; color: #fff !important; font-weight: bold; padding: 8px 18px; }
 .home2 .img-ph.sm { float: left; width: 60px; height: 74px; line-height: 72px; margin: 2px 8px 4px 0; }
 .home2 .book-feat { text-align: left; overflow: hidden; }
 .home2 .book-txt { line-height: 1.8; font-size: 13px; color: #333; }
@@ -452,7 +457,7 @@ table { border-collapse: collapse; }
 /* ---------- 页脚 ---------- */
 .footer { border-top: 2px solid #3F8805; background: #EBF3E6; margin-top: 12px; padding: 14px 0 18px; text-align: center; color: #7a8a72; line-height: 2; }
 .footer a { color: #005826; margin: 0 6px; }
-.footer .copy { color: #6b7a63; font-size: 11px; }
+.footer .copy { color: #3F8805; font-size: 13px; font-weight: bold; }
 .footer .tree { color: #A0C484; font-size: 11px; letter-spacing: 4px; margin-bottom: 4px; }
 
 /* ---------- 分页 ---------- */
