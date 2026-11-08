@@ -305,6 +305,55 @@ table { border-collapse: collapse; }
   color: #9aa390; font-size: 11px; line-height: 1.6;
   border-top: 1px dotted #e5ece0; margin-top: 5px; padding-top: 5px;
 }
+
+/* ---------- 首页 v2.6（按 ld_index 原文两栏：左 158 / 右 612） ---------- */
+.home2 .col-w { float: right; width: 612px; }
+.home2 .duo { overflow: hidden; margin-bottom: 10px; }
+.home2 .duo-l { float: left; width: 305px; }
+.home2 .duo-r { float: right; width: 303px; padding-left: 8px; border-left: 1px solid #dfe8d8; box-sizing: border-box; }
+.home2 .sec-hd {
+  height: 26px; line-height: 26px; background: #A0C484; padding: 0 8px;
+  font: bold 13px/26px "宋体", SimSun; color: #14522a; letter-spacing: 1px;
+  text-align: left; margin-bottom: 4px;
+}
+.home2 .sec-hd .more { float: right; font-size: 12px; color: #2c6103; font-weight: normal; }
+.home2 .sec-hd .more a { color: #2c6103; }
+.home2 .club-grid { width: 100%; border-collapse: collapse; margin-bottom: 10px; table-layout: fixed; }
+.home2 .club-grid td { width: 102px; box-sizing: border-box; text-align: center; padding: 4px 2px; font-size: 13px; }
+.home2 .club-grid td a { color: #006600; }
+.home2 .plain-list li {
+  height: 25px; line-height: 25px; overflow: hidden; white-space: nowrap;
+  text-overflow: ellipsis; border-bottom: 1px dotted #dde6d6; padding-left: 2px;
+  font-size: 13px; color: #333; text-align: left;
+}
+.home2 .plain-list li.last { border-bottom: 0; }
+.home2 .plain-list li a { font-size: 13px; }
+.home2 .plain-list li .dot { color: #3F8805; }
+.home2 .orange, .home2 .orange a { color: #FF6600; }
+.home2 .home-rank li a { flex: 1 1 auto; }
+.home2 .ed-box {
+  border: 1px solid #A0C484; background: #f4f9f0; padding: 8px;
+  overflow: hidden; margin-bottom: 8px; text-align: left;
+}
+.home2 .ed-txt { line-height: 1.8; font-size: 13px; color: #333; }
+.home2 .ed-txt a { color: #333; }
+.home2 .img-ph {
+  float: right; width: 96px; height: 118px; background: #dfe9d8;
+  border: 1px solid #c3d3b9; color: #7a8a72; font-size: 11px;
+  text-align: center; line-height: 116px; margin: 0 0 4px 8px; box-sizing: border-box;
+}
+.home2 .img-ph.sm { float: left; width: 60px; height: 74px; line-height: 72px; margin: 2px 8px 4px 0; }
+.home2 .book-feat { text-align: left; overflow: hidden; }
+.home2 .book-txt { line-height: 1.8; font-size: 13px; color: #333; }
+.home2 .board-row { text-align: center; padding: 6px 0; margin-bottom: 10px; font-size: 13px; }
+.home2 .board-row a { color: #006600; margin: 0 8px; }
+.home2 .stat-line { text-align: center; color: #5e6b57; padding: 8px 0 2px; font-size: 13px; }
+.home2 .feat-box {
+  background: #EBF3E6; border: 1px solid #A0C484; padding: 8px;
+  margin-bottom: 10px; text-align: left; line-height: 1.8; color: #005826; font-size: 13px;
+}
+.home2 .partner { text-align: center; line-height: 2; color: #5e6b57; margin-bottom: 10px; font-size: 13px; }
+.home2 .icp { text-align: center; color: #7a8a72; font-size: 12px; padding: 4px 0; }
 .duty-box { line-height: 2; color: #5e6b57; }
 
 /* ---------- 论坛 ---------- */
