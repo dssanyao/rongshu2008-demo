@@ -41,9 +41,9 @@ table { border-collapse: collapse; }
 .topbar a:hover { color: #fff; text-decoration: none; }
 .topbar .left { float: left; }
 .topbar .right { float: right; }
-.topbar .sep { color: #8fbf7a; padding: 0 5px; }
+.topbar .sep { color: #8fbf7a; padding: 0 3px; }
 .topbar input.t {
-  width: 72px; height: 16px; line-height: 16px; border: 1px solid #2c6103;
+  width: 60px; height: 16px; line-height: 16px; border: 1px solid #2c6103;
   padding: 1px 3px; font-size: 12px; font-family: "宋体"; vertical-align: middle;
 }
 .topbar input.b {
@@ -80,7 +80,7 @@ table { border-collapse: collapse; }
 .nav a.on { background: #2c6103; color: #fff; font-weight: bold; }
 .nav .search { float: right; padding: 2px 0 0; }
 .nav .search input.txt {
-  width: 132px; height: 18px; line-height: 18px; border: 1px solid #2c6103;
+  width: 118px; height: 18px; line-height: 18px; border: 1px solid #2c6103;
   padding: 1px 3px; font-size: 12px; font-family: "宋体"; vertical-align: middle;
 }
 .nav .search input.sbtn {
@@ -675,35 +675,8 @@ form.inline { display: inline; }
   position: absolute; right: 12px; top: 9px; font-size: 11px; color: #006600;
 }
 
-/* ---- 自适应（窄屏仅做换行，不改 770 定宽基准） ---- */
-@media (max-width: 900px) {
-  .cp-adaptive .topbar { height: auto; padding: 3px 0; line-height: 1.75; }
-  .cp-adaptive .topbar .left, .cp-adaptive .topbar .right { float: none; }
-  .cp-adaptive .topbar .right { margin-top: 1px; }
-  .cp-adaptive .header { padding: 10px 0; }
-  .cp-adaptive .header .logo { float: none; }
-  .cp-adaptive .slogan-line { display: none; }
-  .hd-club { float: none; width: auto; height: auto; margin-top: 8px; padding: 8px 10px; }
-  .hd-club span { line-height: 1.65; }
-  .hd-club a { position: static; display: inline-block; margin-top: 3px; }
-  .cp-adaptive .nav-row { height: auto; }
-  .cp-adaptive .nav a { height: 26px; line-height: 26px; }
-  .cp-adaptive .nav .search { float: none; padding: 5px 0 4px; }
-  .cp-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
-}
-@media (max-width: 720px) {
-  .cp { display: block; }
-  .cp-side { width: auto; flex: none; margin-bottom: 10px; }
-  .cp-side-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
-  .cp-side-list li { border-bottom: 1px dotted #dde8d5; }
-  .cp-side-bar { display: none; }
-  .cp-newclub { width: auto; margin-left: 0; padding: 0 14px; display: inline-block; }
-  .cp-side-note { margin-top: 6px; }
-  .cp-star { display: block; }
-  .cp-pic { width: auto; height: 124px; margin-bottom: 8px; }
-  .cp-reco { grid-template-columns: 1fr; }
-  .cp-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
-}
+/* 自适应：本站为 770px 定宽复刻（原站同款），窄屏靠 viewport width=770 整体缩放，
+   不做表格折叠/单列重排——折叠会把原站的多列表格拆散，与原站手机浏览效果不符。 */
 
 /* 本期专题（右栏） */
 .topic-box { padding: 1px 0 0; }
@@ -824,14 +797,41 @@ a .bbs-fh-btn:hover { background: #d8e8cc; color: #c00; }
 .bbs-fh-strip2 { height: 12px; background: #fff; font-size: 12px; }
 .bbs-fh-latest th { height: 20px; font-size: 12px; font-weight: bold; text-align: center; }
 .bbs-fh-emptynote { text-align: center; color: #a8b2a0; font-size: 11px; padding: 8px 0; background: #fff; }
-.bbs-fh-main { font-size: 12px; }
+.bbs-fh-main { font-size: 12px; table-layout: fixed; }
 .bbs-fh-main td { height: 19px; padding: 0 4px; }
 .bbs-fh-alt td { background: #fbfff4; }
-.bbs-fh-label { text-align: right; font-size: 12px; white-space: nowrap; }
-.bbs-fh-cell { font-size: 12px; white-space: nowrap; overflow: hidden; }
+/* 固定列宽为内容宽：td 左右各 4px 内边距，渲染后标签格 129、版块格 157，与原站 129/130 单元格一致 */
+.bbs-fh-label { width: 121px; text-align: right; font-size: 12px; white-space: nowrap; }
+.bbs-fh-cell { width: 149px; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bbs-fh-link { color: #000; }
 .bbs-fh-ph { color: #ccc; }
 .bbs-fh-classic td { height: 19px; }
+/* ================= 网文人气周榜（rellist 原文结构：751 外框 / 720 内表） ================= */
+body.bbs-rank { background: #ececec; }
+.bbs-rk-wrap { width: 751px; margin: 0 auto; text-align: left; padding: 6px 0 12px; }
+.bbs-rk-head td { vertical-align: top; }
+.bbs-rk-logo {
+  text-align: center; font: bold 16px/1.8 "宋体"; color: #006600; background: #EBF3E6;
+  border: 1px solid #A0C484; padding: 14px 0;
+}
+.bbs-rk-logo a { color: #006600; }
+.bbs-rk-ad {
+  height: 60px; text-align: center; font-size: 12px; color: #7a8a72; background: #EBF3E6;
+  border: 1px solid #A0C484; line-height: 1.8;
+}
+.bbs-rk-edge { background: #EBF3E6; border: 1px solid #A0C484; }
+.bbs-rk-bar8 { height: 8px; background: #EBF3E6; border: 1px solid #A0C484; }
+.bbs-rk-bar25 { height: 25px; background: #EBF3E6; border: 1px solid #A0C484; }
+.bbs-rk-crumb { font-size: 12px; color: #333; line-height: 1.8; padding: 6px 0; }
+.bbs-rk-crumb a { color: #006600; }
+.bbs-rk-strip { width: 751px; height: 25px; background: #EBF3E6; border: 1px solid #A0C484; margin: 0 auto 8px; box-sizing: border-box; }
+.bbs-rk-table { table-layout: fixed; font-size: 12px; background: #fff; }
+.bbs-rk-table td { padding: 7px 4px; border-bottom: 1px solid #e5ece0; vertical-align: top; line-height: 1.7; }
+.bbs-rk-title a { color: #006600; }
+.bbs-rk-sub { color: #555; font-size: 11px; }
+.bbs-rk-sec { width: 720px; margin: 18px auto 0; background: #fff; border: 1px solid #A0C484; padding: 8px 12px; box-sizing: border-box; }
+.bbs-rk-sec-hd { font: bold 13px/1.8 "宋体"; color: #14522a; border-bottom: 1px solid #cfdcc6; margin-bottom: 4px; }
+.bbs-rk-copy { text-align: center; font-size: 12px; color: #333; padding: 12px 0 4px; }
 .bbs-fh-extra { border: 1px solid #A0C484; background: #fff; margin: 10px 0; padding: 8px 10px; }
 .bbs-fh-extra-hd { font-weight: bold; color: #14522a; font-size: 13px; margin-bottom: 4px; }
 .bbs-fh-extra-note { color: #8b9783; font-size: 11px; line-height: 1.7; margin-bottom: 4px; }
@@ -840,16 +840,16 @@ a .bbs-fh-btn:hover { background: #d8e8cc; color: #c00; }
 .bbs-fh-note { text-align: center; color: #a8b2a0; font-size: 11px; line-height: 1.7; padding: 6px 0; }
 
 /* ---------- 社团总览 ld_zl（771px 居中） ---------- */
-.bbs-cl-wrap { width: 771px; margin: 0 auto; text-align: left; padding: 0 0 10px; background: #fff; }
+.bbs-cl-wrap { width: 770px; margin: 0 auto; text-align: left; padding: 0 0 10px; background: #fff; }
 .bbs-cl-top td { vertical-align: top; font-size: 12px; }
 .bbs-cl-logo {
   width: 157px; height: 77px; background: #EBF3E6; border: 1px solid #A0C484;
   text-align: center; color: #7a8a72; font-size: 11px; line-height: 1.8; padding-top: 18px; box-sizing: border-box;
 }
-.bbs-cl-topbar { padding: 6px 8px; font-size: 12px; }
+.bbs-cl-topbar { padding: 6px 8px; font-size: 12px; white-space: nowrap; }
 .bbs-cl-topbar a { color: #000; }
 .bbs-cl-topbar form { display: inline; }
-.bbs-cl-topbar input.t { width: 72px; height: 16px; border: 1px solid #A0C484; padding: 1px 3px; font: 12px "宋体"; vertical-align: middle; }
+.bbs-cl-topbar input.t { width: 60px; height: 16px; border: 1px solid #A0C484; padding: 1px 3px; font: 12px "宋体"; vertical-align: middle; }
 .bbs-cl-topbar input.b { height: 20px; border: 1px solid #2c6103; background: #3F8805; color: #fff; font: 12px "宋体"; padding: 0 8px; cursor: pointer; vertical-align: middle; }
 .bbs-cl-miniimg { display: inline-block; width: 36px; height: 16px; background: #EBF3E6; border: 1px solid #A0C484; color: #7a8a72; font-size: 10px; text-align: center; line-height: 16px; vertical-align: middle; }
 .bbs-cl-adrow { padding: 4px 0; white-space: nowrap; }
@@ -933,10 +933,4 @@ a .bbs-fh-btn:hover { background: #d8e8cc; color: #c00; }
 }
 .bbs-gate-hidden { color: #D3FEC8; }
 
-@media (max-width: 820px) {
-  .bbs-wrap, .bbs-fh-wrap, .bbs-cl-wrap { width: auto; max-width: 100%; }
-  .bbs-cl-main, .bbs-cl-main tr, .bbs-cl-main td { display: block; width: auto !important; }
-  .bbs-cl-side { margin-bottom: 10px; }
-  .bbs-cl-right { padding-left: 0; }
-  .bbs-cl-reco, .bbs-cl-reco tr, .bbs-cl-reco td { display: block; width: auto !important; }
-}
+/* （窄屏不折表：见上文说明；原 820px 折叠块已删除——它曾把社团主表/推荐表拆成单列） */
