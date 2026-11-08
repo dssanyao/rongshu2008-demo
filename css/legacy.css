@@ -983,3 +983,71 @@ body.bbs-rank { background: #ececec; }
 .bbs-gate-hidden { color: #D3FEC8; }
 
 /* （窄屏不折表：见上文说明；原 820px 折叠块已删除——它曾把社团主表/推荐表拆成单列） */
+
+/* ---------- v3 新增：社团详情（图3 全宽版式） ---------- */
+body.bbs-club { background: #9db98a; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.16) 0 1px, transparent 1px 4px); }
+.bbs-cb-wrap { width: 770px; margin: 0 auto; text-align: left; background: #fff; }
+.bbs-cb-head td { vertical-align: middle; padding: 6px 8px; border-bottom: 1px solid #cfdcc6; }
+.bbs-cb-logo { font: bold 22px/1.4 "宋体"; color: #166b31; }
+.bbs-cb-logo span { font-size: 11px; color: #7d9074; }
+.bbs-cb-banner { text-align: center; font: bold 20px/1.4 "宋体"; color: #3f8805; background: #EBF3E6; }
+.bbs-cb-banner span { display: block; font: normal 11px/1.6 "宋体"; color: #7a8a72; }
+.bbs-cb-headr { font-size: 12px; line-height: 1.8; }
+.bbs-cb-headr a { color: #006600; }
+.bbs-cb-nav td { background: #A0C484; padding: 5px 8px; font-size: 12px; }
+.bbs-cb-nav a { color: #14522a; }
+.bbs-cb-bar td { background: #EBF3E6; border-bottom: 1px solid #A0C484; padding: 5px 8px; font-size: 12px; }
+.bbs-cb-barl { background: #3F8805 !important; color: #fff; font-weight: bold; }
+.bbs-cb-bar a { color: #006600; }
+.bbs-cb-tabs td { padding: 6px 0; border-bottom: 1px solid #cfdcc6; }
+.bbs-cb-tabs a { color: #006600; font-weight: bold; }
+.bbs-cb-motto { padding: 10px 14px; line-height: 1.9; font-size: 12px; border-bottom: 1px solid #cfdcc6; }
+.bbs-cb-motto p { margin: 2px 0; }
+.bbs-cb-motto a { color: #006600; }
+.bbs-cb-count { text-align: center; padding: 10px 0 4px; font-size: 13px; }
+.bbs-cb-count input { font: 12px "宋体"; }
+.bbs-cb-table { table-layout: fixed; font-size: 12px; background: #fff; border-top: 2px solid #3F8805; }
+.bbs-cb-table th { text-align: left; padding: 6px 4px; border-bottom: 2px solid #3F8805; font-size: 13px; }
+.bbs-cb-table td { padding: 5px 4px; border-bottom: 1px solid #e5ece0; line-height: 1.7; vertical-align: top; }
+.bbs-cb-title a { color: #000; }
+.bbs-cb-au { color: #006600; }
+.bbs-cb-n { text-align: right; }
+.bbs-cb-dt { text-align: center; }
+.bbs-cb-pager { text-align: center; padding: 12px 0; font-size: 13px; }
+.bbs-cb-pager a { color: #006600; }
+.bbs-cb-manage { border-top: 1px solid #cfdcc6; padding: 8px 14px 12px; }
+.bbs-cb-cols > div { float: left; width: 48%; margin-right: 2%; }
+.bbs-cb-foot td { border-top: 1px solid #A0C484; background: #EBF3E6; padding: 8px; font-size: 12px; }
+.bbs-cb-foot a { color: #006600; }
+.bbs-cb-copy { text-align: center; font-size: 12px; color: #333; padding: 6px 0 10px; background: #fff; }
+
+/* ---------- v3 新增：帖子详情图7版式 ---------- */
+body.bbs-topic7 { background: #568040; }
+.bbs-t7-wrap { width: 770px; margin: 0 auto; text-align: left; background: #fff; }
+.bbs-t7-head td { padding: 8px; border-bottom: 1px solid #cfdcc6; }
+.bbs-t7-logo { font: bold 22px/1.4 "宋体"; color: #166b31; }
+.bbs-t7-logo span { font-size: 11px; color: #7d9074; }
+.bbs-t7-headr { font-size: 12px; color: #5e6b57; }
+.bbs-t7-bar { background: #EBF3E6; border-bottom: 1px solid #A0C484; padding: 6px 10px; font-size: 12px; }
+.bbs-t7-bar span { float: right; color: #c60; }
+.bbs-t7-title { text-align: center; font: bold 14px/2 "宋体"; border-bottom: 1px solid #cfdcc6; }
+.bbs-t7-title a { color: #006600; font-size: 12px; font-weight: normal; }
+.bbs-t7-topic { text-align: center; font-size: 12px; padding: 8px 0 2px; }
+.bbs-t7-post { padding: 10px 16px; border-bottom: 1px solid #cfdcc6; }
+.bbs-t7-author { font-size: 12px; color: #5e6b57; margin-bottom: 8px; }
+.bbs-t7-body { font-size: 14px; line-height: 2; color: #1a7a1a; }
+.bbs-t7-sig { color: #1a7a1a; font-size: 12px; margin-top: 8px; }
+.bbs-t7-reply { padding: 10px 16px; border-bottom: 1px solid #e5ece0; }
+.bbs-t7-rhd { font: bold 12px/1.8 "宋体"; }
+.bbs-t7-rbd { font-size: 14px; line-height: 2; color: #1a7a1a; padding: 4px 0; }
+.bbs-t7-note { padding: 8px 16px; font-size: 11px; color: #8b9783; line-height: 1.8; }
+.bbs-t7-form { padding: 10px 16px; border-top: 1px solid #cfdcc6; }
+.bbs-t7-formhd { font: bold 13px/2 "宋体"; color: #14522a; }
+.bbs-t7-copy { text-align: center; font-size: 12px; color: #fff; background: #568040; padding: 8px 0; }
+
+/* ---------- v3 新增：榜单对照、文章编者按、版内搜索 ---------- */
+.bbs-rk-note { width: 720px; margin: 0 auto 8px; font-size: 11px; color: #5e6b57; line-height: 1.8; }
+.bbs-rk-pager { text-align: center; padding: 10px 0; }
+.bbs-rk-pager a { color: #006600; }
+.art-ednote { color: #1a7a1a; line-height: 1.9; margin: 10px 0; }
+.bbs-searchwrap td { padding: 6px 0; }
