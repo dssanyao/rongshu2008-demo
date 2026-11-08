@@ -66,14 +66,13 @@ table { border-collapse: collapse; }
 .ad-slot { float: right; width: 468px; height: 60px; overflow: hidden; }
 .ad-slot svg { display: block; }
 
-/* ---------- 导航（两排） ---------- */
+/* ---------- 导航（单排，2026-11-08 用户要求：5 项，15px 加粗） ---------- */
 .nav { background: #3F8805; border-top: 2px solid #2c6103; border-bottom: 1px solid #2c6103; }
 .nav .wrap { text-align: left; }
-.nav-row { height: 26px; line-height: 26px; overflow: hidden; }
-.nav-row2 { border-top: 1px solid #57a239; }
+.nav-row { height: 32px; line-height: 32px; overflow: hidden; }
 .nav a {
-  float: left; display: block; height: 26px; line-height: 26px;
-  padding: 0 8px; color: #eaf3e2; font-size: 12px;
+  float: left; display: block; height: 32px; line-height: 32px;
+  padding: 0 8px; color: #eaf3e2; font-size: 15px; font-weight: bold;
   border-right: 1px solid #57a239;
 }
 .nav a:hover { background: #2c6103; color: #fff; text-decoration: none; }
